@@ -34,7 +34,7 @@ Serial.println(recieved_signal);
 - We used a simple construction in Fig. 9 to get the result of the vibration frequency of the surface, which is the mathematical foundation of this project. In this scenario, the fiber optic specifications play an important part in transporting data from one location to another without losing any data.
 - The optic fibers typically have a 0.98-mm core made of Poly-Methyl-Methacrylate (PMMA) [3] and surrounded by a thin (about 20-m) fluorinated polymer cladding (which is much larger than the 9-m core of glass single mode fibers used for high-performance optical communications and the 62.5-m core of multimode glass fibers). As a result, the Ray Optics computation is basically depicted below.
 ![Simple_Design.JPG](Simple_Design.JPG)
-
+![math1.JPG](Mathematical_background/math1.JPG)
 
 
 
