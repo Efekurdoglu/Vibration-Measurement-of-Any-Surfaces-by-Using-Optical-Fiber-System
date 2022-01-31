@@ -28,11 +28,12 @@ Serial.println(recieved_signal);
 }
 ## MATLAB 2021b
 - While getting our data from Arduino, we need to apply some methods to get meaning of the data.Data recieved is a vector array which includes numerical voltages starting from zero to N number of index.  We applied FFT (Fast Fourier Transform) to recieved vector array to separate all the signals which are acquiring from the surface. And then, we will have several spectral components so that the frequency of the surface could be obtained. Due to constaints of our physical model, we are only be able to define our own signal and process it for simulation. Amplitudes of ac components of the signals are given randomly.
-![led_circuit_2.png](Proteus/led_circuit_2.png)
-
-
-
-
+![matlab1.png](Matlab/matlab1.png)
+![matlab2.png](Matlab/matlab2.png)
+## Mathematical Background
+- We used a simple construction in Fig. 9 to get the result of the vibration frequency of the surface, which is the mathematical foundation of this project. In this scenario, the fiber optic specifications play an important part in transporting data from one location to another without losing any data.
+- The optic fibers typically have a 0.98-mm core made of Poly-Methyl-Methacrylate (PMMA) [3] and surrounded by a thin (about 20-m) fluorinated polymer cladding (which is much larger than the 9-m core of glass single mode fibers used for high-performance optical communications and the 62.5-m core of multimode glass fibers). As a result, the Ray Optics computation is basically depicted below.
+![Simple_Design.JPG](Simple_Design.JPG)
 
 
 
