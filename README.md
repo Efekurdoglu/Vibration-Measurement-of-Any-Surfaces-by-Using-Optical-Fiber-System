@@ -34,6 +34,7 @@ Serial.println(recieved_signal);
 - We used a simple construction in Fig. 9 to get the result of the vibration frequency of the surface, which is the mathematical foundation of this project. In this scenario, the fiber optic specifications play an important part in transporting data from one location to another without losing any data.
 - The optic fibers typically have a 0.98-mm core made of Poly-Methyl-Methacrylate (PMMA) [3] and surrounded by a thin (about 20-m) fluorinated polymer cladding (which is much larger than the 9-m core of glass single mode fibers used for high-performance optical communications and the 62.5-m core of multimode glass fibers). As a result, the Ray Optics computation is basically depicted below.
 ![Simple_Design.JPG](Simple_Design.JPG)
+### [Video Demo For an intuition!](https://www.youtube.com/watch?v=JxWaZ8a8mq8)
 ![math1.JPG](Mathematical_background/math1.JPG)
 - When this equation equals to 0, we would have gotten clear data output from photodiode. 
 ![math2.JPG](Mathematical_background/math2.JPG)
@@ -46,16 +47,27 @@ Serial.println(recieved_signal);
 - By using Reflectivity compensation technique, the calculations could be done as show below. The sinusoidal modulation of the incident light;
 ![math3.JPG](Mathematical_background/math3.JPG)
 ![math4.JPG](Mathematical_background/math4.JPG)
-
-
-
-
-
-
-
-
-
-
+![fig2.png](Mathematical_background/fig2.png)
+- In this case, the target behaves like a mixer for the optical beams; therefore, the received signal has five spectral components, as shown in Fig. 11, each depending on the unknown term A. Thus, to determine the amplitude of the vibration Av independently from A, in principle, it is sufficient to consider the ratio of any term containing AV with a term not containing AV; however, from a practical point of view and to also compensate the amplitude fluctuations of the LED emissions, there are only two possible solutions:
+- The ratio of the component V2 and the component at the LED signal frequency V3 yields the vibration amplitude. This method exclusively uses ac components, which eliminates the dc term's disruptions. Furthermore, using a high LED modulation frequency allows the beat signal V3 (i.e., the component proportional to the vibration amplitude) to be moved further away from the mains signal disruptions, improving overall accuracy. Furthermore, by selecting an LED modulation frequency that is close to that of the vibrating target, it is possible to exploit the mixing effect while measuring high-frequency vibrations and shift down the beat signal to a frequency low enough to be monitored with low-performance equipment. This approach can also be used to measure nonsinusoidal vibrations converted to low frequencies, despite some limits in the vibration bandwidth [7].
+- The amplitude of the vibration signal can be derived using the only ac components approach by measuring the amplitude of the components V3 and V2 at the beat frequency L v and the LED stimulus frequency L, respectively. As a result of,  the vibration amplitude can be calculated as follows.
+![math5.JPG](Mathematical_background/math5.JPG)
+- The spectral component ratio compensates for possible time fluctuations in target reflectivity or amplifier gains, whilst the R0/R1 ratio works as a scaling factor that can be calculated analytically from fiber properties and target distance using the theoretical model.
+![math6.JPG](Mathematical_background/math6.JPG)
+- The distance za was evaluated from the optical power curve, obtaining Za = 1.75 mm. Then, this value was employed to derive the scale factor R01.
+![fig3.png](Mathematical_background/fig3.png)
+## Conclusion
+- In conclusion, vibration frequencies and amplitudes can be evaluated from using reflectivity compensantion technique by using fiber characteristics and seperating the recieved signal to its frequency components by digital signal processing. By using that technique, we can avoid chain gains captured by photodiode which can not be calculated so easily. We could not perform any physical applications hence we only made simulations by using predetermined data.
+### References
+* [1] Guido Perrone, Member, IEEE, and Alberto Vallan, “A Low-Cost Optical Sensor for Noncontact Vibration Measurements,” IEEE Transactions on Instrumentation and Measurement, vol. 58, no. 5, May 2009
+* [2] R. Dib, Y. Alayli, and P.Wagstaff, “A broadband amplitude-modulated fibre optic vibrometer with nanometric accuracy,” Meas., vol. 35, no. 2, pp. 211–219, Mar. 2004.
+* [3] X. Li, K. Nakamura, and S. Ueha, “Reflectivity and illuminating power compensation for optical fibre vibrometer,” Meas. Sci. Technol., vol. 15, no. 9, pp. 1773–1778, Sep. 2004.
+* [4] A. Buffa, G. Perrone, and A. Vallan, “A plastic optical fiber sensor for vibration measurements,” in Proc. IEEE IMTC, Vancouver, BC, Canada, May 12–15, 2008, pp. 1387–1391.
+* [5] R. Dib, Y. Alayli, and P.Wagstaff, “A broadband amplitude-modulated fibre optic vibrometer with nanometric accuracy,” Meas., vol. 35, no. 2, pp. 211– 219, Mar. 2004.
+* [6] X. Li, K. Nakamura, and S. Ueha, “Reflectivity and illuminating power compensation for optical fibre vibrometer,” Meas. Sci. Technol., vol. 15, no. 9, pp. 1773–1778, Sep. 2004.
+* [7] L. Schnell, Ed., Technology of Electrical Measurements. Chichester, U.K.: Wiley, 1993.
+* [8] Guide to the Expression of Uncertainty in Measurement, Int. Stand. Org., Geneva, Switzerland, Oct. 1993.
+* [9] A. Buffa, G. Perrone, and A. Vallan, “A plastic optical fiber sensor for vibration measurements,” in Proc. IEEE IMTC, Vancouver, BC, Canada, May 12–15, 2008, pp. 1387–1391.
 
 
 
