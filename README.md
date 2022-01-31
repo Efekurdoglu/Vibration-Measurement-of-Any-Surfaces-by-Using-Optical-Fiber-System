@@ -35,12 +35,17 @@ Serial.println(recieved_signal);
 - The optic fibers typically have a 0.98-mm core made of Poly-Methyl-Methacrylate (PMMA) [3] and surrounded by a thin (about 20-m) fluorinated polymer cladding (which is much larger than the 9-m core of glass single mode fibers used for high-performance optical communications and the 62.5-m core of multimode glass fibers). As a result, the Ray Optics computation is basically depicted below.
 ![Simple_Design.JPG](Simple_Design.JPG)
 ![math1.JPG](Mathematical_background/math1.JPG)
-
-
-
-
-
-
+- When this equation equals to 0, we would have gotten clear data output from photodiode. 
+![math2.JPG](Mathematical_background/math2.JPG)
+- The solution that will be provided in this project is based on spectral analysis of the received signal when the incoming light is modulated sinusoidally.
+![fig1.png](Mathematical_background/fig1.png)
+* D_0:  Mean value of target distance
+* d = Target distance between fiber tips
+* w_a: Radius of plastic optical fiber
+* z_a: Position of the light asymptotic cone vertex
+- By using Reflectivity compensation technique, the calculations could be done as show below. The sinusoidal modulation of the incident light;
+![math3.JPG](Mathematical_background/math3.JPG)
+![math4.JPG](Mathematical_background/math4.JPG)
 
 
 
