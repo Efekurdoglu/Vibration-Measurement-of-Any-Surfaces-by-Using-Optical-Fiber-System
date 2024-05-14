@@ -17,7 +17,7 @@
 - All matrix multiplication has been done in Spyder by using Python3. The purpose of using this program is to enhance our ability to work a wide range in software.
 ## Proteus 8 Professional
 - The electrical circuit model was built in order to implement the exact real-life scenario. Hence, the infrared (IR) LED was used to have more consistent and least confliction with other light waves in the experimental environment. The circuit simulate the capturing light by using photodiode, in this circuit. The light was directed to photodiode without any component but the project was aimed to move the light from the source and reflected from the vibrated surface with the help of optical fiber, then the reflected light delivered to photodiode. While capturing the data by the photodiode, the necessary parameters can be found and implemented into real world application.
-## Arduino
+## Microcontroller
 - When we get the output from the circuit, we need to analyze the data and comment about the frequency as well as amplitude. Thus, the output of the circuit is implemented into Arduino as an analog input and then transfer the data into Matlab throughout Rx and Tx communication protocol. Code:
 void setup() {
 Serial.begin(115200);
